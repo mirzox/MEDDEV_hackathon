@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/doctor/patient/verifycode/" method="post">
+    {% csrf_token %}
+    <label for="phone">Your name: </label>
+    <input id="phone" type="text" name="phone" value="{{ phone }}" maxlength="13" minlength="13">
+     <label for="code">Code: </label>
+    <input id="code" type="text" name="code" value="" maxlength="6" minlength="6">
+    <input type="submit" value="OK">
+</form>
+
+</body>
+</html>
